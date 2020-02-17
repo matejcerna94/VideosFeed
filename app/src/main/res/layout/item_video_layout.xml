@@ -46,7 +46,7 @@
         android:textColor="@color/colorWhite" />
 
     <TextView
-        android:id="@+id/_text_view_created"
+        android:id="@+id/text_view_created"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_description"
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_description"
-        android:layout_toEndOf="@id/_text_view_created"
+        android:layout_toEndOf="@id/text_view_created"
         android:paddingStart="5dp"
         android:text="@string/created"
         android:textColor="@color/colorWhite" />

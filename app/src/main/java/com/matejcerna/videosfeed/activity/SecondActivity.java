@@ -3,8 +3,8 @@ package com.matejcerna.videosfeed.activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
@@ -12,10 +12,15 @@ import android.widget.VideoView;
 import com.matejcerna.videosfeed.R;
 import com.matejcerna.videosfeed.controller.CustomVideoController;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class SecondActivity extends AppCompatActivity {
 
-    VideoView videoView;
+
     CustomVideoController mediaController;
+    @BindView(R.id.video_view_second)
+    VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +28,9 @@ public class SecondActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_second);
+        ButterKnife.bind(this);
 
-        videoView = findViewById(R.id.video_view_second);
+
         mediaController = new CustomVideoController(this, SecondActivity.this, videoView);
 
         Intent intent = getIntent();

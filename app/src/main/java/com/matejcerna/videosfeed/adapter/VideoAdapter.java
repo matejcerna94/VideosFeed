@@ -15,7 +15,9 @@ import com.matejcerna.videosfeed.R;
 import com.matejcerna.videosfeed.activity.SecondActivity;
 import com.matejcerna.videosfeed.model.Video;
 
+
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
+
 
     private Context context;
     private Video[] data;
@@ -97,6 +99,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         TextView textViewDescription;
         TextView textViewAuthor;
         TextView textViewCreatedBefore;
+
 
         public VideoViewHolder(@NonNull View itemView) {
             super(itemView);

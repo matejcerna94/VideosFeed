@@ -18,16 +18,22 @@ import com.matejcerna.videosfeed.R;
 import com.matejcerna.videosfeed.adapter.VideoAdapter;
 import com.matejcerna.videosfeed.model.Video;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String URL = "https://private-anon-a74ec5785a-technicaltaskapi.apiary-mock.com/feed";
+    @BindView(R.id.recycler_view)
+    RecyclerView recyclerView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        ButterKnife.bind(this);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         StringRequest request = new StringRequest(URL, new Response.Listener<String>() {
