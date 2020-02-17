@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VideosFeed</string>
+    <string name="author">Author:</string>
+    <string name="created">Created:</string>
+    <string name="description">Description</string>
+
+
+</resources>

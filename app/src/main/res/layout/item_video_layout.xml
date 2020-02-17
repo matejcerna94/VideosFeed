@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/selector">
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:id="@+id/text_view_description"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_view"
+        android:fontFamily="@font/roman_serif"
+        android:gravity="center_horizontal"
+        android:text="@string/description"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/author_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_description"
+        android:paddingStart="12dp"
+        android:text="@string/author"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/text_view_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_description"
+        android:layout_toEndOf="@id/author_text"
+        android:paddingStart="5dp"
+        android:text="@string/author"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/_text_view_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_description"
+        android:layout_marginStart="110dp"
+        android:layout_toEndOf="@id/text_view_author"
+        android:text="@string/created"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/created_before_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_description"
+        android:layout_toEndOf="@id/_text_view_created"
+        android:paddingStart="5dp"
+        android:text="@string/created"
+        android:textColor="@color/colorWhite" />
+
+
+</RelativeLayout>
+
+
