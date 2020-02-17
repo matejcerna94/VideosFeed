@@ -30,7 +30,6 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         ButterKnife.bind(this);
 
-
         mediaController = new CustomVideoController(this, SecondActivity.this, videoView);
 
         Intent intent = getIntent();
