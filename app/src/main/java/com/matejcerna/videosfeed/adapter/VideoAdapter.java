@@ -15,9 +15,11 @@ import com.matejcerna.videosfeed.R;
 import com.matejcerna.videosfeed.activity.SecondActivity;
 import com.matejcerna.videosfeed.model.Video;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
-
 
     private Context context;
     private Video[] data;
@@ -95,18 +97,19 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     }
 
     public class VideoViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.video_view)
         VideoView videoView;
+        @BindView(R.id.text_view_description)
         TextView textViewDescription;
+        @BindView(R.id.text_view_author)
         TextView textViewAuthor;
+        @BindView(R.id.created_before_text_view)
         TextView textViewCreatedBefore;
 
 
         public VideoViewHolder(@NonNull View itemView) {
             super(itemView);
-            videoView = itemView.findViewById(R.id.video_view);
-            textViewDescription = itemView.findViewById(R.id.text_view_description);
-            textViewAuthor = itemView.findViewById(R.id.text_view_author);
-            textViewCreatedBefore = itemView.findViewById(R.id.created_before_text_view);
+            ButterKnife.bind(this,itemView);
         }
     }
 }
